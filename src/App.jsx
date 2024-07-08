@@ -1,6 +1,6 @@
 import { useState } from 'react';
 
-import DadosImc from './components/Header';
+import Header from './components/Header';
 import Formulario from './components/Formulario';
 
 function App() {
@@ -9,7 +9,7 @@ function App() {
 
   return(
     <>
-      <DadosImc />
+      <Header />
       <Formulario />
     </>
   )

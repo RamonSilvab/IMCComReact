@@ -23,13 +23,15 @@ const Formulario = () => {
 
     return (
         <>
-            <div>
-                <input type="number" placeholder="Digite sua Altura (m)" required onChange={({ target }) => setAltura(parseFloat(target.value))} />
-                <input type="number" placeholder="Digite seu Peso (kg)" required onChange={({ target }) => setPeso(parseFloat(target.value))} />
-                <button onClick={resultado}>Calcular</button>
+            <div className="d-flex justify-content-center mt-5">
+                <div>
+                    <input className=" form-control mb-2" type="number" placeholder="Digite sua Altura (m)" required onChange={({ target }) => setAltura(parseFloat(target.value))} />
+                    <input className=" form-control " type="number" placeholder="Digite seu Peso (kg)" required onChange={({ target }) => setPeso(parseFloat(target.value))} />
+                    <button className="btn btn-dark mt-2 w-100" onClick={resultado}>Calcular</button>
+                </div>
             </div>
-            <div>
-                {resultadoIMC && <span> {resultadoIMC} </span>}
+            <div className="text-center mt-4">
+                {resultadoIMC && <span className="fs-3 text-light fw-bold"> {resultadoIMC} </span>}
             </div>
         </>
     )
